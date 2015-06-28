@@ -7,6 +7,8 @@ A <u> basic python console application </u> which recieves five variables(detail
 **base.py** provides an abstact class for the format conversion</br>
 **toPDF.py** using [pyfpdf](https://github.com/reingart/pyfpdf) it creates a new file and writes collected data into the file</br>
 **toTXT.py** Creates a simple text file and writes data into the file</br>
+**ExportHandler.py** Handels Export by asking required format and calling appropriate function
+**Alien.py** Contains a class which bounds details of an alien and takes input
 
 # python version - 3
 
