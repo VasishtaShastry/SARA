@@ -7,14 +7,13 @@ FORMATS_AVAILABLE = {
 
 
 
-# Class which gets user required format and calls appropriate funtion to export
+# This class gets user required format and calls appropriate function to export
 # information in that format  
 class exportAlienDetails():
     # function to import appropriate module to convert data into user required 
     # format 
     def convert_to_dest_format(self, to_format, alien):
         try:
-            # 
             # Reference: http://stackoverflow.com/questions/4821104/python-dynamic-instantiation-from-string-name-of-a-class-in-dynamically-imported
             module = __import__(FORMATS_AVAILABLE[to_format][1])
             class_name = getattr(module, FORMATS_AVAILABLE[to_format][2])
