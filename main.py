@@ -10,13 +10,6 @@ import sys
 from alien import Alien
 from ExportHandler import export_alien_details
 
-FORMATS_AVAILABLE = {
-#   "format" : "input text", <module to import from>, <classname>,
-    "1" : ("pdf", "toPDF", "ToPDF"),
-    "2" : ("txt", "toTXT", "ToTXT"),
-#   "FOOBAR" : ("foobar", 3, "<module name>", "classname"),
-    }
-    
 
         
 #main
