@@ -9,7 +9,7 @@ FORMATS_AVAILABLE = {
 
 # Class which gets user required format and calls appropriate funtion to export
 # information in that format  
-class export_alien_details():
+class exportAlienDetails():
     # function to import appropriate module to convert data into user required 
     # format 
     def convert_to_dest_format(self, to_format, alien):

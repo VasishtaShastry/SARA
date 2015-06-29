@@ -2,23 +2,23 @@
 import sys
 class Alien:
     def __init__(self):
-        self.code_name = ""
-        self.blood_color = ""
-        self.num_of_antennas = 0
-        self.num_of_legs = 0
-        self.home_planet = ""
-    # num in the sense number      
+        self.codeName = ""
+        self.bloodColor = ""
+        self.numberOfAntennas = 0
+        self.numberOfLegs = 0
+        self.homePlanet = ""
+    
     # take_input - take input from user and store them in class variables 
     def takeInput(self):
-        self.code_name = input("Code name : ")
-        self.blood_color = input("Blood Color: ")
+        self.codeName = input("Code name : ")
+        self.bloodColor = input("Blood Color: ")
         while True:
                 try:        
-                        self.num_of_antennas = int(input("Number of Antennas: "))
-                        self.num_of_legs = int(input("Number of Legs: "))
+                        self.numberOfAntennas = int(input("Number of Antennas: "))
+                        self.numberOfLegs = int(input("Number of Legs: "))
                         break
                 except Exception as e:
                         print("Invalid Input : Integer Required")
                         print("\nTry Again\n")
                         continue
-        self.home_planet = input("Home Planet: ")
+        self.homePlanet = input("Home Planet: ")

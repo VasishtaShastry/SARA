@@ -8,9 +8,14 @@
 
 import sys
 from alien import Alien
-from ExportHandler import exportAlienDetails
+from ExportHandler import export_alien_details
 
-
+FORMATS_AVAILABLE = {
+#   "format" : "input text", <module to import from>, <classname>,
+    "1" : ("pdf", "toPDF", "ToPDF"),
+    "2" : ("txt", "toTXT", "ToTXT"),
+#   "FOOBAR" : ("foobar", 3, "<module name>", "classname"),
+    }
     
 
         
@@ -21,4 +26,4 @@ if __name__ == '__main__':
     alien = Alien()
     alien.takeInput()
 
-    exportAlienDetails().get_required_format_name(alien)
+    export_alien_details().get_required_format_name(alien)

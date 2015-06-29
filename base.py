@@ -12,9 +12,9 @@ class Conversions:
 
     # Returns a variable containig string to be copied to file
     def get_info(self, alien):
-        info = self.get_format() %(alien.code_name, alien.blood_color, \
-                            alien.num_of_antennas, alien.num_of_legs, \
-                            alien.home_planet)
+        info = self.get_format() %(alien.codeName, alien.bloodColor, \
+                            alien.numberOfAntennas, alien.numberOfLegs,\
+                            alien.homePlanet)
         return info
         
     # Abstract class which can be overriden by conversion classes
