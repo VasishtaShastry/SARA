@@ -16,7 +16,7 @@ A <u> basic python console application </u> which recieves five variables(detail
 
 ### How to implement 'plug in'
 
-1.open main.py after donloading</br>
+1.open main.py after downloading</br>
 2.go to FORMATS_AVAILABLE dictionary</br>
 3.enter details in mentioned format and also as mentioned in example</br>
 4.copy your file</br>
