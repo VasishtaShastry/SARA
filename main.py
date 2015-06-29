@@ -24,6 +24,6 @@ if __name__ == '__main__':
     print("Welcome")
 
     alien = Alien()
-    alien.take_input()
+    alien.takeInput()
 
     export_alien_details().get_required_format_name(alien)
