@@ -1,7 +1,5 @@
 FORMATS_AVAILABLE = {
 #   "format" : "input text", <module to import from>, <classname>,
-    "1" : ("pdf", "toPDF", "ToPDF"),
-    "2" : ("txt", "toTXT", "ToTXT"),
 #   "FOOBAR" : ("foobar", 3, "<module name>", "classname"),
     }
 
@@ -30,15 +28,29 @@ class exportAlienDetails():
         print ("Conversion successful!! Dest file: ", path)
         return 0
 
+    def fetch_plugins(self):
+        global FORMATS_AVAILABLE
+        
+        modules_list = list(p[:-3] for p in pathlib.Path('./plugins/').iterdir() if p.is_file() and p.endswith(".py"))
+        classes = [module.capitalize() for module in modules]
+        
+        for idx, each_module, each_class in zip(range(1, len(modules)), modules_str, classes):
+            module = __import__("plugins." + each_module)
+            FORMATS_AVAILABLE[idx] = (getattr(module, each_class).FORMAT_NAME, each_module, each_class)
+            del module
+            
     # gets user required format and call convert funtion
     def get_required_format_name(self, alien):
         print("To which format would like to export?")
         for key in FORMATS_AVAILABLE:
             print (key, ". ", FORMATS_AVAILABLE[key][0])
 
-        to_format = input()
+        try:
+            to_format = int(input())
+        except Exception as e:
+            print ("Error in input: ", e)
         
-        if int(to_format) > len(FORMATS_AVAILABLE):
+        if to_format > len(FORMATS_AVAILABLE):
             print("\n****Wrong Selection***\n")
             sys.exit(0)
 
