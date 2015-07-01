@@ -41,6 +41,8 @@ class exportAlienDetails():
             
     # gets user required format and call convert funtion
     def get_required_format_name(self, alien):
+        self.fetch_plugins()
+        
         print("To which format would like to export?")
         for key in FORMATS_AVAILABLE:
             print (key, ". ", FORMATS_AVAILABLE[key][0])
