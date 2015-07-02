@@ -1,3 +1,4 @@
+
 # base.py
 # This is base class for all conversion format codes
 class Conversions:
@@ -12,13 +13,16 @@ class Conversions:
 
     # Returns a variable containig string to be copied to file
     def get_info(self, alien):
+        
+        #info = self.get_format() % ( alien.__dict__[(key for key in alien.__dict__.keys())])
+        
         info = self.get_format() %(alien.codeName, alien.bloodColor, \
                             alien.numberOfAntennas, alien.numberOfLegs,\
                             alien.homePlanet)
         return info
         
     # Abstract class which can be overriden by conversion classes
-    def convert(self, alien):
+    def convert(self,alien):
         print ("This is an abstrace class. If you see this message we're "
                "sorry, this is because of an error.")
         return -1;
