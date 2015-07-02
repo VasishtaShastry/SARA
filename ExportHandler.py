@@ -3,7 +3,7 @@ FORMATS_AVAILABLE = {
 #   "FOOBAR" : ("foobar", 3, "<module name>", "classname"),
     }
     
-imoprt pathlib
+import pathlib
 
 
 
