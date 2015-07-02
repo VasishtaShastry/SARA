@@ -2,6 +2,8 @@ FORMATS_AVAILABLE = {
 #   "format" : "input text", <module to import from>, <classname>,
 #   "FOOBAR" : ("foobar", 3, "<module name>", "classname"),
     }
+    
+imoprt pathlib
 
 
 
