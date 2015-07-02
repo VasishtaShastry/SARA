@@ -1,24 +1,21 @@
-
+alien_details_to_print = {
+    "codeName" : "Code Name :",
+    "bloodColor" : "Blood Color :",
+    "numberOfAntennas" : "Number of Antennas :",
+    "numberOfLegs" : "Number of legs : ",
+    "homePlanet" : "Home Planet : ",
+    }
 # base.py
 # This is base class for all conversion format codes
 class Conversions:
-    # function which returns a string to get_info function
-    def get_format(self):
-        return \
-        "Code Name: %s  \n"\
-        +"Blood Color: %s  \n"\
-        +"Number: %d  \n"\
-        +"Number of legs: %d  \n"\
-        +"Home Planet: %s  \n"
-
+   
     # Returns a variable containig string to be copied to file
     def get_info(self, alien):
+        info = ""
+        for key, value in alien.__dict__.items():
+            if not key.startswith("__"):
+                info += "%s : %s\n" % (alien_details_to_print[key],value)
         
-        #info = self.get_format() % ( alien.__dict__[(key for key in alien.__dict__.keys())])
-        
-        info = self.get_format() %(alien.codeName, alien.bloodColor, \
-                            alien.numberOfAntennas, alien.numberOfLegs,\
-                            alien.homePlanet)
         return info
         
     # Abstract class which can be overriden by conversion classes
