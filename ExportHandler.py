@@ -31,7 +31,7 @@ class exportAlienDetails():
     def fetch_plugins(self):
         global FORMATS_AVAILABLE
         
-        modules_list = list(p[:-3] for p in pathlib.Path('./plugins/').iterdir() if p.is_file() and p.endswith(".py"))
+        modules_list = [str(p)[:-3] for p in pathlib.Path('./plugins/').iterdir() if p.is_file() and str(p).endswith(".py")]
         classes = [module.capitalize() for module in modules]
         
         for idx, each_module, each_class in zip(range(1, len(modules)), modules_str, classes):
