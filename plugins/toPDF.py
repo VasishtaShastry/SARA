@@ -2,12 +2,13 @@ from base import Conversions
 from main import Alien
 
 # To create and write in to a .pdf format
-# inherits Conversions class from base module 
-# uses pyfpdf module to convert into pdf format  
+# inherits Conversions class from base module
+# uses pyfpdf module to convert into pdf format
 class ToPDF(Conversions):
+    FORMAT_NAME = "pdf"
     def convert(self, alien):
         path = "Alien details.pdf"
-        import fpdf 
+        import fpdf
         to_pdf_str = self.get_info(alien)
 
         pdf = fpdf.FPDF(format = 'letter')
