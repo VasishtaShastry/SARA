@@ -8,11 +8,10 @@ PLUGINS_DIR = "plugins"
 import pathlib
 import alien
 import sys
-# This class gets user required format and calls appropriate function to export
-# information in that format
+# gets user required format and calls appropriate function to export
+
 class ExportHandler():
-    # function to import appropriate module to convert data into user required
-    # format
+   
     def convert_to_dest_format(to_format, alien):
         
         
@@ -45,6 +44,3 @@ class ExportHandler():
             module = __import__(PLUGINS_DIR + "." + each_module)
             FORMATS_AVAILABLE[idx] = (getattr(getattr(module, each_module), each_class).FORMAT_NAME, each_module, each_class)
             del module
-
-        #print (FORMATS_AVAILABLE)
-

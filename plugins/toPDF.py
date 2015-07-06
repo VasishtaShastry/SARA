@@ -1,9 +1,9 @@
-from base import Conversions
+from conversions import Conversions
 from main import Alien
 
 # To create and write in to a .pdf format
-# inherits Conversions class from base module
-# uses pyfpdf module to convert into pdf format
+# inherits Conversions class & uses pyfpdf module
+
 class ToPDF(Conversions):
     FORMAT_NAME = "pdf"
     def convert(self, alien):

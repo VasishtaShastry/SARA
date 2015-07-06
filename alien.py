@@ -1,4 +1,4 @@
-# A class which bounds all information about a alien and takes input 
+# bounds information about an alien
 
 class Alien:
     def __init__(self):

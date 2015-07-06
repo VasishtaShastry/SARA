@@ -1,7 +1,7 @@
 # Recommended to import and extend your class with our Base class
 from base import Conversions
 
-# The name of the class should be name of the module with first letter
+# name of the class should be name of the module with first letter
 # capitalized.
 class Dummy(Conversions):
     # Declare a class variable FORMAT_NAME and specify the format you're

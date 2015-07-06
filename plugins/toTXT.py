@@ -1,8 +1,8 @@
 from base import Conversions
 from main import Alien
 
-# To create and write in to a .txt format
-# inherits Conversions class from base module
+# To create and write in to a .txt format- inherits Conversions class
+from base module
 class ToTXT(Conversions):
     FORMAT_NAME = "txt"
     def convert(self, alien):
