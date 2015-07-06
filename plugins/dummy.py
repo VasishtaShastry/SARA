@@ -1,5 +1,5 @@
 # Recommended to import and extend your class with our Base class
-from base import Conversions
+from conversions import Conversions
 
 # name of the class should be name of the module with first letter
 # capitalized.
